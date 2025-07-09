@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Globe, Github } from 'lucide-react';
+import { Github, Code } from 'lucide-react';
 import { Badge } from './Badge';
 import { Button } from './Button';
 
@@ -52,10 +52,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 						<div className="flex space-x-3">
 							<Button
 								size="sm"
-								className="bg-white text-purple-600 hover:bg-purple-50 px-4 py-2 rounded-full"
+								variant="outline"
+								className="bg-white/90 border-white text-gray-700 hover:bg-white px-4 py-2 rounded-full"
 								onClick={() => window.open(project.link, '_blank')}>
-								<Globe className="mr-2 h-4 w-4" />
-								Live Demo
+								<Code className="mr-2 h-4 w-4" />
+								Code
 							</Button>
 							<Button
 								size="sm"

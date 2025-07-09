@@ -3,7 +3,7 @@ import { Code, Globe, Palette, Smartphone } from 'lucide-react';
 export const technologies = [
 	{
 		category: 'Frontend',
-		icon: <Code />,
+		icon: Code,
 		skills: [
 			'React',
 			'Next.js',
@@ -24,7 +24,7 @@ export const technologies = [
 	},
 	{
 		category: 'Backend',
-		icon: <Globe />,
+		icon: Globe,
 		skills: [
 			'Node.js',
 			'PostgreSQL',
@@ -42,13 +42,13 @@ export const technologies = [
 	},
 	{
 		category: 'Mobil',
-		icon: <Smartphone />,
+		icon: Smartphone,
 		skills: ['React Native', 'Expo', 'iOS', 'Android', 'Android Studio'],
 		color: 'from-purple-600 to-pink-500',
 	},
 	{
 		category: 'Herramientas',
-		icon: <Palette />,
+		icon: Palette,
 		skills: [
 			'Docker',
 			'Git',

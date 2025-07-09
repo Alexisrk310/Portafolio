@@ -32,6 +32,7 @@ export function SocialLinks() {
 						key={index}
 						whileHover={{ scale: 1.1, x: 5 }}
 						href={link.href}
+						rel="noopener noreferrer"
 						target="_blank"
 						className="w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center text-purple-600 hover:bg-purple-50 transition-colors">
 						{link.icon}
