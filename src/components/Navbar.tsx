@@ -74,7 +74,7 @@ export function Navbar() {
 							className="block text-gray-700 hover:text-purple-600 font-medium capitalize"
 							onClick={() => setIsOpen(false)}>
 							{section.name}
-						</Link>
+						</a>
 					))}
 					<Button
 						onClick={() =>
