@@ -8,9 +8,9 @@ import { DownloadCVButton } from '@/components/DownloadCVButton';
 import { EducationCard } from '@/components/EducationCard';
 import { ExperienceItem } from '@/components/ExperienceItem';
 import { ExperienceStatItem } from '@/components/ExperienceStatItem';
+import FactCardList from '@/components/FactCardList';
 import { HeroImage } from '@/components/HeroImage';
 import { HeroSection } from '@/components/HeroSection';
-
 import HobbyCard from '@/components/HobbyCard';
 import SkillGroupList from '@/components/SkillGroupList';
 import SocialCard from '@/components/SocialCard';
@@ -20,6 +20,7 @@ import { contact } from '@/constants/contact';
 import { education } from '@/constants/education';
 import { experience, experienceStats } from '@/constants/experience';
 import { hobbies } from '@/constants/hobbies';
+import { myData } from '@/constants/myData';
 import { projects } from '@/constants/projects';
 import { socialNetworks } from '@/constants/socialNetworks';
 import { startProject } from '@/constants/startProject';
@@ -28,7 +29,9 @@ import { motion } from 'framer-motion';
 
 export default function HomePage() {
 	return (
-		<div className="h-full bg-gradient-to-br from-purple-50 to-indigo-100 pt-20 sm:pt-0">
+		<div
+			id="inicio"
+			className="h-full bg-gradient-to-br from-purple-50 to-indigo-100 pt-20 sm:pt-0">
 			<section id="home" className="h-screen flex items-center">
 				<div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
 					<HeroSection />
@@ -38,7 +41,7 @@ export default function HomePage() {
 			<SocialLinks />
 			<DownloadCVButton />
 			{/* Projects Section */}
-			<section id="projects" className="py-20 px-6 bg-white">
+			<section id="proyectos" className="py-20 px-6 bg-white">
 				<div className="container mx-auto">
 					<motion.div
 						initial={{ opacity: 0, y: 50 }}
@@ -119,7 +122,7 @@ export default function HomePage() {
 			</section>
 
 			{/* Experience Section */}
-			<section id="experience" className="py-20 px-6 bg-white">
+			<section id="experiencia" className="py-20 px-6 bg-white">
 				<div className="container mx-auto">
 					<motion.div
 						initial={{ opacity: 0, y: 50 }}
@@ -169,7 +172,7 @@ export default function HomePage() {
 			</section>
 			{/* About Me Section */}
 			<section
-				id="about"
+				id="acerca-de-mi"
 				className="py-20 px-6 bg-gradient-to-br from-purple-50 to-indigo-50">
 				<div className="container mx-auto">
 					<motion.div
@@ -242,52 +245,7 @@ export default function HomePage() {
 									Datos Interesantes
 								</h3>
 								<div className="space-y-4">
-									{[
-										{
-											label: 'Locación',
-											value: 'Colombia, Cartagena',
-											icon: '🌍',
-										},
-										{ label: 'Edad', value: '23 años', icon: '🎂' },
-										{
-											label: 'Lenguaje',
-											value: 'Español, Ingles basico',
-											icon: '🗣️',
-										},
-										{
-											label: 'Experiencia',
-											value: '2+ años de experiencia',
-											icon: '💼',
-										},
-										{
-											label: 'Disponible',
-											value: 'Abierto a nuevas posibilidades de trabajo',
-											icon: '✅',
-										},
-										{
-											label: 'Preferencias de trabajo',
-											value: 'Remoto y hibrido',
-											icon: '🏠',
-										},
-									].map((fact, index) => (
-										<motion.div
-											key={index}
-											initial={{ opacity: 0, y: 20 }}
-											whileInView={{ opacity: 1, y: 0 }}
-											transition={{ duration: 0.4, delay: index * 0.1 }}
-											viewport={{ once: true }}
-											className="flex items-center space-x-4 p-3 rounded-xl hover:bg-purple-50 transition-colors">
-											<div className="text-2xl">{fact.icon}</div>
-											<div>
-												<div className="text-sm font-semibold text-gray-800">
-													{fact.label}
-												</div>
-												<div className="text-sm text-gray-600">
-													{fact.value}
-												</div>
-											</div>
-										</motion.div>
-									))}
+									<FactCardList data={myData} />
 								</div>
 							</div>
 						</motion.div>

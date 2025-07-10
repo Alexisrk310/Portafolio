@@ -30,18 +30,25 @@ export function Navbar() {
 				{/* Desktop Links */}
 				<div className="hidden md:flex space-x-8">
 					{navLinks.map((section) => (
-						<Link
+						<a
+							href={section.href}
 							key={section.name}
-							to={section.href}
 							className="text-gray-600 hover:text-purple-600 transition-colors font-medium capitalize">
 							{section.name}
-						</Link>
+						</a>
 					))}
 				</div>
 
 				{/* Contact Button */}
 				<div className="hidden md:block">
-					<Button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full text-sm md:text-base">
+					<Button
+						onClick={() =>
+							window.open(
+								'mailto:alexisrk310@gmail.com?subject=Estás disponible?',
+								'_blank'
+							)
+						}
+						className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full text-sm md:text-base">
 						<Mail className="mr-2 h-4 w-4" />
 						Contact Me
 					</Button>
@@ -69,7 +76,14 @@ export function Navbar() {
 							{section.name}
 						</Link>
 					))}
-					<Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-full flex justify-center items-center text-sm">
+					<Button
+						onClick={() =>
+							window.open(
+								'mailto:alexisrk310@gmail.com?subject=Estás disponible?',
+								'_blank'
+							)
+						}
+						className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-full flex justify-center items-center text-sm">
 						<Mail className="mr-2 h-4 w-4" />
 						Contact Me
 					</Button>

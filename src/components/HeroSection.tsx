@@ -41,6 +41,9 @@ export function HeroSection() {
 				variants={fadeInUp}
 				className="flex flex-col sm:flex-row gap-4 pt-4 max-w-md sm:max-w-none mx-auto sm:mx-0">
 				<Button
+					onClick={() => {
+						window.open('/cv/HV-ALEXIS-GUTIERREZ.pdf');
+					}}
 					size="lg"
 					className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full flex items-center justify-center w-full sm:w-auto">
 					<Play className="mr-2 h-5 w-5 fill-current" />
@@ -49,6 +52,12 @@ export function HeroSection() {
 				<Button
 					size="lg"
 					variant="outline"
+					onClick={() => {
+						window.open(
+							'https://www.linkedin.com/in/alexis-miguel-gutierrez-ruiz-542364202/',
+							'_blank'
+						);
+					}}
 					className="border-purple-200 text-purple-600 hover:bg-purple-50 px-8 py-3 rounded-full bg-transparent w-full sm:w-auto">
 					Contrátame
 				</Button>
