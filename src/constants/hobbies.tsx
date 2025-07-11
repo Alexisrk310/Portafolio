@@ -30,7 +30,7 @@ export const hobbies = [
 	{
 		title: 'Música',
 		description:
-			'Electrónica, jazz y rock indie. Aprendiendo a tocar la guitarra en mi tiempo libre.',
+			'Reggaetón, trap latino y corridos urbanos. Explorando nuevos sonidos del género urbano mientras disfruto letras con sentimiento y estilo callejero.',
 		icon: '🎵',
 		color: 'from-purple-600 to-pink-500',
 	},
