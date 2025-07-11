@@ -68,13 +68,13 @@ export function Navbar() {
 			{isOpen && (
 				<div className="md:hidden bg-white px-6 py-4 space-y-4 border-t border-purple-100">
 					{navLinks.map((section) => (
-						<Link
+						<a
 							key={section.name}
-							to={section.href}
+							href={section.href}
 							className="block text-gray-700 hover:text-purple-600 font-medium capitalize"
 							onClick={() => setIsOpen(false)}>
 							{section.name}
-						</Link>
+						</a>
 					))}
 					<Button
 						onClick={() =>
