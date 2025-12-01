@@ -1,6 +1,12 @@
-import { Code, Globe, Palette, Smartphone } from 'lucide-react';
+import { Code, Code2, Globe, Palette, Smartphone } from 'lucide-react';
 
 export const technologies = [
+	{
+		category: 'Lenguajes',
+		icon: Code2,
+		skills: ['Java', 'JavaScript', 'TypeScript', 'Python'],
+		color: 'from-purple-500 to-pink-500',
+	},
 	{
 		category: 'Frontend',
 		icon: Code,

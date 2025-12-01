@@ -68,17 +68,20 @@ export const experience = [
 	},
 	{
 		company: 'Freelance / Independiente',
-		role: 'Desarrollador Web',
+		role: 'Desarrollador de Software',
 		period: '2023 - Presente', // Estimado, ajusta si hay fechas exactas
 		location: 'Remoto',
 		type: 'Freelance',
 		description:
-			'Como desarrollador web independiente, creo sitios web completos con frontend, backend y bases de datos. Diseño interfaces modernas y APIs seguras adaptadas a cada cliente, desde sitios informativos hasta sistemas complejos.',
+			'Como desarrollador de software independiente, creo sitios web completos con frontend, backend y bases de datos. Desarrollo interfaces modernas, funcionales y responsivas, así como APIs seguras adaptadas a cada cliente, desde sitios informativos hasta sistemas más complejos. Además, cuento con experiencia en el desarrollo backend utilizando Java, aplicando buenas prácticas, arquitectura limpia y manejo de servicios robustos orientados a alto rendimiento.',
 		achievements: [
 			'Entrega de soluciones personalizadas y funcionales',
 			'Creación de APIs seguras y conectadas a bases de datos',
 			'Diseño de interfaces modernas y adaptables',
 			'Alta satisfacción del cliente en cada proyecto',
+			'Gestión completa del ciclo de desarrollo web',
+			'Adaptación a diversas necesidades y sectores',
+			'Implementación de buenas prácticas de desarrollo',
 		],
 		technologies: [
 			'React',
@@ -89,6 +92,7 @@ export const experience = [
 			'MySQL',
 			'Tailwind CSS',
 			'TypeScript',
+			'Java',
 		],
 		logo: '/placeholder.svg?height=60&width=60',
 	},
