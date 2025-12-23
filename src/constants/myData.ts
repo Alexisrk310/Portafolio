@@ -4,7 +4,7 @@ export const myData = [
 		value: 'Colombia, Cartagena',
 		icon: '🌍',
 	},
-	{ label: 'Edad', value: '23 años', icon: '🎂' },
+	{ label: 'Edad', value: '24 años', icon: '🎂' },
 	{
 		label: 'Lenguaje',
 		value: 'Español, Ingles basico',

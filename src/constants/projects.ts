@@ -79,4 +79,74 @@ export const projects = [
 		link: 'https://landing-page-template-opal.vercel.app/',
 		github: 'https://github.com/Alexisrk310/landing-page-template',
 	},
+	{
+		title: 'ThunderXis',
+		description:
+			'Página web para un restaurante con menú interactivo y pasarela de pago integrada, que permite a los usuarios realizar pedidos en línea de forma rápida y segura. Incluye una experiencia de usuario intuitiva, diseño responsive, gestión de productos y flujo de compra optimizado para recibir el producto directamente en la puerta de su casa.',
+		image: '/projects/thunderxis.png?height=250&width=400',
+		tags: [
+			// Framework & Core
+			'Next.js',
+			'React',
+			'TypeScript',
+
+			// Styling & UI
+			'Tailwind CSS',
+			'Radix UI',
+			'Lucide Icons',
+			'CSS-in-JS',
+			'Responsive Design',
+			'UI/UX',
+
+			// Forms & Validation
+			'React Hook Form',
+			'Zod',
+			'Form Validation',
+
+			// State Management
+			'Zustand',
+
+			// Animations & UX
+			'Framer Motion',
+			'Sonner (Toasts)',
+			'Canvas Confetti',
+
+			// Backend / BaaS
+			'Supabase',
+			'Supabase Auth',
+			'Supabase SSR',
+
+			// Data & Charts
+			'Recharts',
+			'Date-fns',
+
+			// PDF / Files / Export
+			'jsPDF',
+			'jsPDF AutoTable',
+			'ExcelJS',
+			'FileSaver',
+
+			// Payments & Emails
+			'MercadoPago',
+			'Resend',
+
+			// Utilities
+			'Clsx',
+			'Tailwind Merge',
+			'Class Variance Authority',
+
+			// Architecture & Best Practices
+			'Server Components',
+			'Client Components',
+			'API Routes',
+			'SSR',
+			'SEO',
+			'Clean Architecture',
+			'Reusable Components'
+		]
+		,
+		category: 'Full Stack',
+		link: 'https://thunderxis.store',
+		github: 'https://github.com/Alexisrk310/thunderxis',
+	},
 ];

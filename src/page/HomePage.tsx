@@ -208,28 +208,27 @@ export default function HomePage() {
 								</h3>
 								<div className="space-y-4 text-gray-600 leading-relaxed">
 									<p>
-										¡Hola! Soy Alexis, un apasionado desarrollador full-stack
-										especializado en frontend, de Colombia, con más de dos años
-										de experiencia creando soluciones digitales que marcan la
-										diferencia. Mi incursión en la tecnología comenzó en la
-										universidad, cuando creé mi primer sitio web: un portafolio
-										sencillo que despertó mi pasión por la programación.
+										Soy Alexis, desarrollador full-stack con enfoque en frontend, ubicado en
+										Colombia, con más de dos años de experiencia en el desarrollo de soluciones
+										digitales orientadas a la calidad, escalabilidad y usabilidad. Mi formación
+										en tecnología comenzó en la universidad, donde desarrollé mis primeros
+										proyectos web, consolidando así mis bases en programación.
 									</p>
 									<p>
-										Lo que me motiva es la combinación perfecta de creatividad y
-										lógica que ofrece la programación. Creo en escribir código
-										limpio y fácil de mantener, y en crear experiencias de
-										usuario que sean atractivas y funcionales. Cuando no estoy
-										programando, me encontrarás explorando nuevas tecnologías,
-										contribuyendo al código abierto o compartiendo conocimientos
-										con la comunidad de desarrolladores.
+										Mi enfoque profesional se centra en la escritura de código limpio,
+										mantenible y alineado con buenas prácticas, así como en la construcción de
+										experiencias de usuario claras, eficientes y funcionales. Mantengo un
+										aprendizaje constante mediante la exploración de nuevas tecnologías, la
+										contribución a proyectos de código abierto y la colaboración con la
+										comunidad técnica.
 									</p>
 									<p>
-										Siempre me entusiasma asumir nuevos retos y colaborar con
-										equipos que comparten mi pasión por la innovación y la
-										excelencia. ¡Construyamos algo increíble juntos!
+										Estoy interesado en asumir nuevos desafíos profesionales y en colaborar con
+										equipos multidisciplinarios que busquen desarrollar productos digitales
+										sólidos, innovadores y orientados a resultados.
 									</p>
 								</div>
+
 							</div>
 						</motion.div>
 
@@ -437,8 +436,7 @@ export default function HomePage() {
 						viewport={{ once: true }}
 						className="text-center mt-16 pt-8 border-t border-gray-200">
 						<p className="text-gray-500 text-sm">
-							© 2024 Alexis Gutierrez. Construido con ❤️ usando React, Motion y
-							Tailwind CSS
+							© 2024 Alexis Gutierrez.
 						</p>
 						<p className="text-gray-400 text-xs mt-2">
 							Este portafolio es de código abierto y está disponible en{' '}

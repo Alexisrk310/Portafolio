@@ -15,14 +15,7 @@ export const socialNetworks = [
 		color: 'from-blue-600 to-blue-800',
 		url: 'https://www.linkedin.com/in/alexis-miguel-gutierrez-ruiz-542364202/',
 	},
-	// {
-	// 	name: 'Twitter',
-	// 	username: '@alexis_codes',
-	// 	followers: '892 seguidores',
-	// 	icon: '🐦',
-	// 	color: 'from-sky-500 to-sky-700',
-	// 	url: 'https://twitter.com/alexis_codes',
-	// },
+
 	{
 		name: 'Instagram',
 		username: '@alexisgg310',
