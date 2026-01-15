@@ -85,57 +85,36 @@ export const projects = [
 			'Página web para un restaurante con menú interactivo y pasarela de pago integrada, que permite a los usuarios realizar pedidos en línea de forma rápida y segura. Incluye una experiencia de usuario intuitiva, diseño responsive, gestión de productos y flujo de compra optimizado para recibir el producto directamente en la puerta de su casa.',
 		image: '/projects/thunderxis.png?height=250&width=400',
 		tags: [
-			// Framework & Core
 			'Next.js',
 			'React',
 			'TypeScript',
-
-			// Styling & UI
 			'Tailwind CSS',
 			'Radix UI',
 			'Lucide Icons',
 			'CSS-in-JS',
 			'Responsive Design',
 			'UI/UX',
-
-			// Forms & Validation
 			'React Hook Form',
 			'Zod',
 			'Form Validation',
-
-			// State Management
 			'Zustand',
-
-			// Animations & UX
 			'Framer Motion',
 			'Sonner (Toasts)',
 			'Canvas Confetti',
-
-			// Backend / BaaS
 			'Supabase',
 			'Supabase Auth',
 			'Supabase SSR',
-
-			// Data & Charts
 			'Recharts',
 			'Date-fns',
-
-			// PDF / Files / Export
 			'jsPDF',
 			'jsPDF AutoTable',
 			'ExcelJS',
 			'FileSaver',
-
-			// Payments & Emails
 			'MercadoPago',
 			'Resend',
-
-			// Utilities
 			'Clsx',
 			'Tailwind Merge',
 			'Class Variance Authority',
-
-			// Architecture & Best Practices
 			'Server Components',
 			'Client Components',
 			'API Routes',
@@ -149,4 +128,80 @@ export const projects = [
 		link: 'https://thunderxis.store',
 		github: 'https://github.com/Alexisrk310/thunderxis',
 	},
+	{
+		title: 'Foodies',
+		description:
+			'Aplicación web full stack para pedidos de comida en línea, desarrollada con Next.js y React. Incluye gestión de productos, autenticación con Supabase, formularios validados, generación de reportes en PDF y Excel, animaciones, gráficos y pasarela de pago integrada con MercadoPago. Diseño responsive, experiencia de usuario optimizada y arquitectura limpia con componentes reutilizables.',
+		image: '/projects/foodies.png?height=250&width=400',
+		tags: [
+			'Next.js',
+			'React',
+			'TypeScript',
+			'Tailwind CSS',
+			'Radix UI',
+			'Lucide React',
+			'Responsive Design',
+			'UI/UX',
+			'React Hook Form',
+			'Zod',
+			'Form Validation',
+			'Zustand',
+			'Framer Motion',
+			'Sonner (Toasts)',
+			'Canvas Confetti',
+			'Supabase',
+			'Supabase Auth',
+			'Supabase SSR',
+			'Recharts',
+			'Date-fns',
+			'jsPDF',
+			'jsPDF AutoTable',
+			'ExcelJS',
+			'FileSaver',
+			'MercadoPago',
+			'Resend',
+			'Clsx',
+			'Tailwind Merge',
+			'Class Variance Authority',
+			'Server Components',
+			'Client Components',
+			'API Routes',
+			'SSR',
+			'SEO',
+			'Clean Architecture',
+			'Reusable Components'
+		],
+		category: 'Full Stack',
+		link: 'https://shop-food-seven.vercel.app/',
+		github: 'https://github.com/Alexisrk310/shop-food'
+	},
+	{
+		title: 'Menu Restaurant',
+		description:
+			'Aplicación web para restaurantes que permite mostrar un menú digital interactivo con navegación por rutas públicas y privadas. Incluye generación de códigos QR para acceso rápido al menú, animaciones fluidas, diseño responsive y una experiencia moderna optimizada para dispositivos móviles. Construida con React y Vite, utilizando Supabase como backend y una arquitectura limpia con componentes reutilizables.',
+		image: '/projects/menu-restaurant.png?height=250&width=400',
+		tags: [
+			'React',
+			'TypeScript',
+			'Vite',
+			'Tailwind CSS',
+			'React Router DOM',
+			'Supabase',
+			'Framer Motion',
+			'Lucide React',
+			'QR Code',
+			'QR Menu',
+			'Responsive Design',
+			'UI/UX',
+			'Clsx',
+			'Tailwind Merge',
+			'Component-Based Architecture',
+			'Reusable Components'
+		],
+		category: 'Frontend',
+		link: 'https://menu-restaurant-xi-ten.vercel.app/',
+		github: 'https://github.com/Alexisrk310/menu-restaurant'
+	}
+
+
 ];

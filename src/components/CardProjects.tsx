@@ -36,9 +36,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 						alt={project.title}
 						width={400}
 						height={250}
-						className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+						className="w-full h-48 object-cover lg:group-hover:scale-110 transition-transform duration-500"
 					/>
-					<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300"></div>
 
 					{/* Badge Categoría */}
 					<div className="absolute top-4 left-4">
@@ -48,7 +48,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 					</div>
 
 					{/* Acciones al hacer hover */}
-					<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+					<div className="absolute inset-0 flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
 						<div className="flex space-x-3">
 							<Button
 								size="sm"
@@ -56,7 +56,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 								className="bg-white/90 border-white text-gray-700 hover:bg-white px-4 py-2 rounded-full"
 								onClick={() => window.open(project.link, '_blank')}>
 								<Code className="mr-2 h-4 w-4" />
-								Code
+								Web
 							</Button>
 							<Button
 								size="sm"
