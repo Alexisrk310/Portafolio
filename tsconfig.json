@@ -18,6 +18,12 @@
     "noEmit": true
   },
 
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "**/*.d.ts"]
+  "files": [],
+  "include": [],
+  "exclude": ["node_modules", "dist"],
+
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
