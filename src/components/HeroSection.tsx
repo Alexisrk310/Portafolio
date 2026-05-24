@@ -22,7 +22,7 @@ export function HeroSection() {
 			<motion.div variants={fadeInUp} className="space-y-4">
 				<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
 					Soy <span className="text-purple-600">Alexis Gutierrez</span>,<br />
-					<span className="text-gray-700">Desarrollador Frontend</span>
+					<span className="text-gray-700">Ingeniero de Software</span>
 					<br />
 					<span className="text-gray-600">en Colombia.</span>
 				</h1>
@@ -31,10 +31,10 @@ export function HeroSection() {
 			<motion.p
 				variants={fadeInUp}
 				className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto sm:mx-0 leading-relaxed">
-				Programador comprometido con el desarrollo de soluciones tecnológicas
-				que faciliten y mejoren la vida de las personas. Me especializo en
-				escribir código limpio, estructurado y fácil de mantener, aplicando
-				buenas prácticas y principios de desarrollo moderno.
+				Ingeniero de Software especializado en Frontend. Me enfoco en crear
+				aplicaciones web escalables, utilizar arquitecturas modernas y ofrecer
+				experiencias de usuario de alto rendimiento aplicando principios de
+				código limpio.
 			</motion.p>
 
 			<motion.div
@@ -47,19 +47,16 @@ export function HeroSection() {
 					size="lg"
 					className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full flex items-center justify-center w-full sm:w-auto">
 					<Play className="mr-2 h-5 w-5 fill-current" />
-					Mirar mi portafolio
+					Descargar CV
 				</Button>
 				<Button
 					size="lg"
 					variant="outline"
 					onClick={() => {
-						window.open(
-							'https://www.linkedin.com/in/alexis-miguel-gutierrez-ruiz-542364202/',
-							'_blank'
-						);
+						document.getElementById('proyectos')?.scrollIntoView({ behavior: 'smooth' });
 					}}
 					className="border-purple-200 text-purple-600 hover:bg-purple-50 px-8 py-3 rounded-full bg-transparent w-full sm:w-auto">
-					Contrátame
+					Ver Proyectos
 				</Button>
 			</motion.div>
 		</motion.div>

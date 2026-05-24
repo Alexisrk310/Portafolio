@@ -3,7 +3,7 @@ export const education = [
 		institution: 'Corporación Universitaria Rafael Núñez',
 		degree: 'Ingeniería de Sistemas',
 		period: 'feb. 2023 - may. 2024',
-		type: 'Profesional', // Falta confirmar si es título universitario completo
+		type: 'Profesional Universitario',
 		description:
 			'Programa de Ingeniería de Sistemas orientado al desarrollo de soluciones tecnológicas y sistemas de información.', // Descripción agregada como contexto
 

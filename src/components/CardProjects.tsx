@@ -50,22 +50,26 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 					{/* Acciones al hacer hover */}
 					<div className="absolute inset-0 flex items-center justify-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
 						<div className="flex space-x-3">
-							<Button
-								size="sm"
-								variant="outline"
-								className="bg-white/90 border-white text-gray-700 hover:bg-white px-4 py-2 rounded-full"
-								onClick={() => window.open(project.link, '_blank')}>
-								<Code className="mr-2 h-4 w-4" />
-								Web
-							</Button>
-							<Button
-								size="sm"
-								variant="outline"
-								className="bg-white/90 border-white text-gray-700 hover:bg-white px-4 py-2 rounded-full"
-								onClick={() => window.open(project.github, '_blank')}>
-								<Github className="mr-2 h-4 w-4" />
-								Code
-							</Button>
+							{project.link && project.link !== '#' && (
+								<Button
+									size="sm"
+									variant="outline"
+									className="bg-white/90 border-white text-gray-700 hover:bg-white px-4 py-2 rounded-full"
+									onClick={() => window.open(project.link, '_blank')}>
+									<Code className="mr-2 h-4 w-4" />
+									Web
+								</Button>
+							)}
+							{project.github && project.github !== '#' && (
+								<Button
+									size="sm"
+									variant="outline"
+									className="bg-white/90 border-white text-gray-700 hover:bg-white px-4 py-2 rounded-full"
+									onClick={() => window.open(project.github, '_blank')}>
+									<Github className="mr-2 h-4 w-4" />
+									Code
+								</Button>
+							)}
 						</div>
 					</div>
 				</div>

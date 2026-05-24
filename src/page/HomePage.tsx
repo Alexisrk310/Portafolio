@@ -144,11 +144,7 @@ export default function HomePage() {
 					</motion.div>
 
 					<div className="max-w-4xl mx-auto">
-						{/* Timeline */}
 						<div className="relative">
-							{/* Timeline Line */}
-							<div className="absolute left-8 md:left-1/2 transform md:-translate-x-0.5 w-0.5 h-full bg-gradient-to-b from-purple-400 via-indigo-400 to-purple-400"></div>
-
 							{experience.map((exp, index) => (
 								<ExperienceItem key={index} experience={exp} index={index} />
 							))}
@@ -185,11 +181,11 @@ export default function HomePage() {
 							👨‍💻 Acerca de mi
 						</Badge>
 						<h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-							Ven <span className="text-purple-600">Conoceme</span>
+							Sobre <span className="text-purple-600">Mí</span>
 						</h2>
 						<p className="text-lg text-gray-600 max-w-2xl mx-auto">
 							Más allá del código, esto es lo que me define: mi trayectoria, mis
-							pasiones y las experiencias que dan forma a mi trabajo.
+							prácticas de ingeniería y mi enfoque en crear productos digitales de alto impacto.
 						</p>
 					</motion.div>
 
@@ -204,28 +200,25 @@ export default function HomePage() {
 							className="space-y-6">
 							<div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
 								<h3 className="text-2xl font-bold text-gray-800 mb-4">
-									Mi historia
+									Mi perfil técnico
 								</h3>
 								<div className="space-y-4 text-gray-600 leading-relaxed">
 									<p>
-										Soy Alexis, desarrollador full-stack con enfoque en frontend, ubicado en
-										Colombia, con más de dos años de experiencia en el desarrollo de soluciones
-										digitales orientadas a la calidad, escalabilidad y usabilidad. Mi formación
-										en tecnología comenzó en la universidad, donde desarrollé mis primeros
-										proyectos web, consolidando así mis bases en programación.
+										Soy Alexis, un Ingeniero de Software ubicado en
+										Colombia con experiencia comprobada en el desarrollo de soluciones
+										digitales orientadas a la calidad, escalabilidad y usabilidad.
 									</p>
 									<p>
-										Mi enfoque profesional se centra en la escritura de código limpio,
-										mantenible y alineado con buenas prácticas, así como en la construcción de
-										experiencias de usuario claras, eficientes y funcionales. Mantengo un
-										aprendizaje constante mediante la exploración de nuevas tecnologías, la
-										contribución a proyectos de código abierto y la colaboración con la
-										comunidad técnica.
+										Mi enfoque profesional se centra en la aplicación rigurosa de <strong>Clean Code</strong>,
+										principios <strong>SOLID</strong>, y la creación de arquitecturas modulares (como Component-Driven Development).
+										Entiendo que el código no solo debe funcionar, sino que debe ser mantenible y
+										fácil de escalar en equipos de alto rendimiento. Además, tengo experiencia integrando
+										servicios en la nube y optimizando el ciclo de vida del software con metodologías modernas.
 									</p>
 									<p>
-										Estoy interesado en asumir nuevos desafíos profesionales y en colaborar con
-										equipos multidisciplinarios que busquen desarrollar productos digitales
-										sólidos, innovadores y orientados a resultados.
+										Estoy constantemente investigando nuevas herramientas en el ecosistema de React y Node.js,
+										contribuyendo a la comunidad y buscando desafíos que me permitan construir productos
+										tecnológicos que soporten tráfico masivo y resuelvan problemas complejos.
 									</p>
 								</div>
 

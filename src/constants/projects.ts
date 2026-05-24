@@ -1,5 +1,55 @@
 export const projects = [
 	{
+		title: 'Malú Premium',
+		description:
+			'Malú es la marca premium de fajas modeladoras colombianas. Este e-commerce fue desarrollado con Next.js, enfocado en ofrecer un diseño exclusivo y animaciones fluidas. Incluye pasarela de pago, catálogo dinámico de productos, optimización SEO y experiencia de usuario de alta calidad adaptada a cualquier dispositivo móvil o de escritorio.',
+		image: '/projects/malupremium.png?height=250&width=400',
+		tags: ['Next.js', 'React', 'TailwindCSS', 'Framer Motion', 'SEO'],
+		category: 'Full Stack',
+		link: 'https://malupremium.com/',
+		github: '#',
+	},
+	{
+		title: 'DJ Zesko',
+		description:
+			'Sitio web oficial y portafolio interactivo para DJ Zesko, enfocado en la música electrónica. Desarrollado con Next.js y estilizado con Tailwind CSS, este sitio incluye un reproductor de audio integrado, animaciones avanzadas, agenda de shows en vivo y una sección de reservas, ofreciendo una experiencia inmersiva y muy visual (modo oscuro premium).',
+		image: '/projects/djzesko.png?height=250&width=400',
+		tags: ['Next.js', 'React', 'TailwindCSS', 'Framer Motion', 'UI/UX'],
+		category: 'Frontend',
+		link: 'https://djzesko.com/',
+		github: '#',
+	},
+	{
+		title: 'Inmobiliaria Cyan',
+		description:
+			'Aplicación web moderna para la búsqueda y visualización de bienes raíces. Permite explorar un catálogo de propiedades con filtros dinámicos, imágenes de alta calidad y detalles específicos de cada inmueble. Desarrollada con React y Vite, enfocada en un rendimiento ultrarrápido y una interfaz muy limpia.',
+		image: '/projects/inmobiliaria.png?height=250&width=400',
+		tags: ['React', 'Vite', 'TailwindCSS', 'React Router'],
+		category: 'Frontend',
+		link: 'https://inmobiliaria-cyan.vercel.app/',
+		github: '#',
+	},
+	{
+		title: 'Ecommerce Clara',
+		description:
+			'Plataforma de comercio electrónico rápida e intuitiva, construida con React y Vite. Incluye funcionalidades completas de tienda como listado de productos, carrito de compras dinámico y un diseño totalmente adaptable (Responsive Design). Todo gestionado con un manejo de estado global eficiente.',
+		image: '/projects/ecommerce-clara.png?height=250&width=400',
+		tags: ['React', 'Vite', 'TailwindCSS', 'Zustand', 'React Router DOM'],
+		category: 'Frontend',
+		link: 'https://ecommerce-clara.vercel.app/',
+		github: '#',
+	},
+	{
+		title: 'Floristería Web',
+		description:
+			'Sitio web elegante y minimalista diseñado para una floristería. Cuenta con un catálogo visual de arreglos florales y opciones de personalización para el cliente. Construida utilizando React y Vite, su interfaz destaca por colores suaves y una experiencia de navegación agradable, pensada en la conversión del usuario.',
+		image: '/projects/floristeria.png?height=250&width=400',
+		tags: ['React', 'Vite', 'TailwindCSS', 'Framer Motion'],
+		category: 'Frontend',
+		link: 'https://floristeriaweb.vercel.app/',
+		github: '#',
+	},
+	{
 		title: 'Barber Shop Website',
 		description:
 			'Es una web para agendar citas de forma rápida y sencilla. Los usuarios pueden registrarse, reservar su servicio con el barbero de su elección y llevar el control de sus citas. Ideal para organizar agendas y ofrecer una atención profesional.',
@@ -38,26 +88,6 @@ export const projects = [
 		category: 'Backend',
 		link: '#',
 		github: 'https://github.com/Alexisrk310/webbarber-backend',
-	},
-	{
-		title: 'Store',
-		description:
-			'Store es una aplicación web tipo ecommerce desarrollada con React, TailwindCSS, Zustand y React Router DOM. Ofrece una experiencia fluida e intuitiva, permitiendo a los usuarios explorar productos y filtrarlos fácilmente por categoría, talla y precio. Su diseño es moderno y adaptable a diferentes dispositivos.',
-		image: '/projects/store.png?height=250&width=400',
-		tags: ['React', 'Motion', 'TailwindCSS', 'Zustand', 'React-router-dom'],
-		category: 'Frontend',
-		link: 'https://store-qwer.vercel.app/',
-		github: 'https://github.com/Alexisrk310/store',
-	},
-	{
-		title: 'TransQ',
-		description:
-			'TransQ es una página web enfocada en servicios de envíos y logística, inspirada en plataformas como DHL. Actualmente se encuentra en la etapa de diseño frontend, desarrollada con una interfaz moderna y adaptable, lista para integrar funcionalidades backend en futuras fases.',
-		image: '/projects/transq.png?height=250&width=400',
-		tags: ['Next.js', 'Framer Motion', 'Tailwind', 'Vercel'],
-		category: 'Frontend',
-		link: 'https://company-green-eight.vercel.app/',
-		github: '#',
 	},
 	{
 		title: 'Translogistica SLA',
@@ -202,6 +232,4 @@ export const projects = [
 		link: 'https://menu-restaurant-xi-ten.vercel.app/',
 		github: 'https://github.com/Alexisrk310/menu-restaurant'
 	}
-
-
 ];

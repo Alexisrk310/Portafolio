@@ -7,7 +7,7 @@ export const myData = [
 	{ label: 'Edad', value: '24 años', icon: '🎂' },
 	{
 		label: 'Lenguaje',
-		value: 'Español, Ingles basico',
+		value: 'Español (Nativo), Inglés Técnico',
 		icon: '🗣️',
 	},
 	{
@@ -22,7 +22,7 @@ export const myData = [
 	},
 	{
 		label: 'Preferencias de trabajo',
-		value: 'Remoto y hibrido',
+		value: 'Remoto e híbrido',
 		icon: '🏠',
 	},
 ];

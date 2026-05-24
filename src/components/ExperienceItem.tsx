@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-
 import type { FC } from 'react';
 import { Badge } from './Badge';
+import { Building2, Calendar, MapPin } from 'lucide-react';
 
 interface ExperienceItemProps {
 	experience: {
@@ -22,109 +22,77 @@ export const ExperienceItem: FC<ExperienceItemProps> = ({
 	experience,
 	index,
 }) => {
-	const isEven = index % 2 === 0;
-
 	return (
 		<motion.div
 			key={index}
-			initial={{ opacity: 0, y: 50 }}
+			initial={{ opacity: 0, y: 20 }}
 			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.6, delay: index * 0.2 }}
+			transition={{ duration: 0.5, delay: index * 0.1 }}
 			viewport={{ once: true }}
-			className={`relative flex items-center mb-12 ${
-				isEven ? 'md:flex-row' : 'md:flex-row-reverse'
-			}`}>
-			{/* Timeline Dot */}
-			<motion.div
-				initial={{ scale: 0 }}
-				whileInView={{ scale: 1 }}
-				transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-				viewport={{ once: true }}
-				className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full border-4 border-white shadow-lg z-10"
-			/>
-
-			{/* Experience Card */}
-			<div
-				className={`w-full md:w-5/12 ml-20 md:ml-0 ${
-					isEven ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
-				}`}>
-				<motion.div
-					whileHover={{ scale: 1.02, y: -5 }}
-					className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-					{/* Header */}
-					<div className="flex items-start justify-between mb-4">
-						<div className="flex items-center space-x-4">
-							<div>
-								<h3 className="text-xl font-bold text-gray-800">
-									{experience.company}
-								</h3>
-								<p className="text-purple-600 font-semibold">
-									{experience.role}
-								</p>
+			className="mb-8 w-full group">
+			<div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-zinc-800">
+				<div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+					<div className="flex items-start gap-4">
+						<div className="w-12 h-12 rounded-xl bg-purple-50 dark:bg-zinc-800 flex items-center justify-center shrink-0 border border-purple-100 dark:border-zinc-700">
+							<Building2 className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+						</div>
+						<div>
+							<h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+								{experience.role}
+							</h3>
+							<h4 className="text-lg font-medium text-gray-700 dark:text-gray-300 mt-1">
+								{experience.company}
+							</h4>
+						</div>
+					</div>
+					<div className="flex flex-col items-start md:items-end gap-2 text-sm text-gray-500 dark:text-gray-400">
+						<div className="flex items-center gap-1.5">
+							<Calendar className="w-4 h-4" />
+							<span className="font-medium">{experience.period}</span>
+						</div>
+						<div className="flex items-center gap-4">
+							<div className="flex items-center gap-1.5">
+								<MapPin className="w-4 h-4" />
+								<span>{experience.location}</span>
 							</div>
-						</div>
-						<Badge className="bg-purple-50 text-purple-700 border-purple-200 text-xs px-2 py-1">
-							{experience.type}
-						</Badge>
-					</div>
-
-					{/* Period and Location */}
-					<div className="flex flex-wrap items-center gap-4 mb-4 text-sm text-gray-500">
-						<div className="flex items-center space-x-1">
-							<div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-							<span>{experience.period}</span>
-						</div>
-						<div className="flex items-center space-x-1">
-							<div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-							<span>{experience.location}</span>
+							<Badge className="bg-gray-100 text-gray-700 border-transparent dark:bg-zinc-800 dark:text-gray-300">
+								{experience.type}
+							</Badge>
 						</div>
 					</div>
+				</div>
 
-					{/* Description */}
-					<p className="text-gray-600 mb-4 leading-relaxed">
+				<div className="pl-0 md:pl-16">
+					<p className="text-gray-600 dark:text-gray-400 mb-5 leading-relaxed text-sm md:text-base">
 						{experience.description}
 					</p>
 
-					{/* Achievements */}
-					<div className="mb-4">
-						<h4 className="text-sm font-semibold text-gray-800 mb-2">
-							Key Achievements:
-						</h4>
-						<ul className="space-y-1">
-							{experience.achievements.map((achievement, achIndex) => (
-								<motion.li
-									key={achIndex}
-									initial={{ opacity: 0, x: -20 }}
-									whileInView={{ opacity: 1, x: 0 }}
-									transition={{
-										duration: 0.4,
-										delay: index * 0.2 + achIndex * 0.1,
-									}}
-									viewport={{ once: true }}
-									className="flex items-center space-x-2 text-sm text-gray-600">
-									<div className="w-1.5 h-1.5 bg-purple-400 rounded-full flex-shrink-0"></div>
-									<span>{achievement}</span>
-								</motion.li>
-							))}
-						</ul>
-					</div>
-
-					{/* Technologies */}
-					<div>
-						<h4 className="text-sm font-semibold text-gray-800 mb-2">
-							Technologies Used:
-						</h4>
-						<div className="flex flex-wrap gap-2">
-							{experience.technologies.map((tech, techIndex) => (
-								<Badge
-									key={techIndex}
-									className="bg-gradient-to-r from-purple-50 to-indigo-50 text-purple-700 border-purple-100 text-xs px-2 py-1">
-									{tech}
-								</Badge>
-							))}
+					{experience.achievements && experience.achievements.length > 0 && (
+						<div className="mb-6">
+							<h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-3 uppercase tracking-wider">
+								Logros Destacados
+							</h4>
+							<ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+								{experience.achievements.map((achievement, achIndex) => (
+									<li key={achIndex} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+										<span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 shrink-0" />
+										<span className="leading-relaxed">{achievement}</span>
+									</li>
+								))}
+							</ul>
 						</div>
+					)}
+
+					<div className="flex flex-wrap gap-2">
+						{experience.technologies.map((tech, techIndex) => (
+							<Badge
+								key={techIndex}
+								className="bg-purple-50 text-purple-700 border-purple-100 hover:bg-purple-100 dark:bg-purple-900/20 dark:text-purple-300 dark:border-purple-800/30 transition-colors text-xs px-2.5 py-1">
+								{tech}
+							</Badge>
+						))}
 					</div>
-				</motion.div>
+				</div>
 			</div>
 		</motion.div>
 	);
