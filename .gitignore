@@ -23,3 +23,13 @@ dist-ssr
 *.sln
 *.sw?
 *.d.ts
+# TypeScript compiled output (not used by Vite)
+.tsc-out/
+
+# Compiled JS duplicates (Vite uses .tsx directly)
+src/**/*.js
+src/**/*.d.ts
+
+# Playwright
+test-results/
+playwright-report/

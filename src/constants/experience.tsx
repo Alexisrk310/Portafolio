@@ -52,11 +52,11 @@ export const experience = [
 	{
 		company: 'TRANSLOGISTICA SLA S.A.S',
 		role: 'Desarrollador Frontend',
-		period: 'Abril 2025 - Presente', // Asumido que sigues allí
+		period: 'Abril 2025 - Diciembre 2025',
 		location: 'Colombia',
 		type: 'Full-time', // Asumido
 		description:
-			'Encargado del diseño, desarrollo y mantenimiento del sitio oficial de la empresa. Implementé estrategias de SEO, publiqué el sitio en su dominio oficial y configuré correos corporativos. Actualmente doy soporte y actualizaciones continuas.',
+			'Encargado del diseño, desarrollo y mantenimiento del sitio oficial de la empresa. Implementé estrategias de SEO, publiqué el sitio en su dominio oficial y configuré correos corporativos, brindando soporte y actualizaciones continuas durante mi permanencia.',
 		achievements: [
 			'Creación y publicación del sitio oficial desde cero',
 			'Optimización SEO para posicionamiento en buscadores',
@@ -69,19 +69,17 @@ export const experience = [
 	{
 		company: 'Freelance / Independiente',
 		role: 'Desarrollador de Software',
-		period: '2023 - Presente', // Estimado, ajusta si hay fechas exactas
+		period: 'Diciembre 2025 - Presente',
 		location: 'Remoto',
 		type: 'Freelance',
 		description:
-			'Como desarrollador de software independiente, creo sitios web completos con frontend, backend y bases de datos. Desarrollo interfaces modernas, funcionales y responsivas, así como APIs seguras adaptadas a cada cliente, desde sitios informativos hasta sistemas más complejos. Además, cuento con experiencia en el desarrollo backend utilizando Java, aplicando buenas prácticas, arquitectura limpia y manejo de servicios robustos orientados a alto rendimiento.',
+			'Desarrollo apps web completas de principio a fin para clientes de distintos sectores: restaurantes, moda, música, logística y más. Me encargo del frontend, backend, base de datos y deploy. Los clientes llegan con una idea y se van con un sitio funcionando en producción.',
 		achievements: [
-			'Entrega de soluciones personalizadas y funcionales',
-			'Creación de APIs seguras y conectadas a bases de datos',
-			'Diseño de interfaces modernas y adaptables',
-			'Alta satisfacción del cliente en cada proyecto',
-			'Gestión completa del ciclo de desarrollo web',
-			'Adaptación a diversas necesidades y sectores',
-			'Implementación de buenas prácticas de desarrollo',
+			'8+ apps en producción con dominio propio (.com, .store)',
+			'Integración de pasarelas de pago reales: MercadoPago y ePayco',
+			'Clientes en sectores de gastronomía, moda, música y logística',
+			'Diseño, desarrollo y deploy gestionado de forma autónoma',
+			'Mantenimiento activo y soporte postventa en proyectos clave',
 		],
 		technologies: [
 			'React',
@@ -103,13 +101,13 @@ export const experience = [
 		location: 'Remoto',
 		type: 'Temporal',
 		description:
-			'Desarrollo de interfaces en React fieles a Figma, revisión de PRs y validación de código siguiendo estándares técnicos, principios SOLID y arquitectura modular. Revisión de integraciones backend en NestJS y colaboración activa para mantener un código limpio, escalable y alineado con las buenas prácticas del equipo.',
+			'Trabajé en equipo con estándares de producción reales: desarrollo de interfaces en React fieles a Figma, revisión de PRs con criterios técnicos, principios SOLID y arquitectura hexagonal. También revisé integraciones de backend en NestJS. Primer rol con flujo de trabajo profesional completo: Husky, ESLint, Prettier, Jest.',
 		achievements: [
-			'Desarrollo de interfaces en React utilizando JSX fieles a los diseños de Figma',
-			'Revisión de Pull Requests garantizando estructura correcta, coherencia visual y cumplimiento de estándares técnicos',
-			'Aplicación de buenas prácticas de desarrollo incluyendo principios SOLID y arquitecturas modulares como la hexagonal',
-			'Revisión de componentes y módulos backend en NestJS para validar integraciones y consistencia entre capas',
-			'Colaboración con el equipo para mantener un código limpio, escalable y alineado con los lineamientos de la organización',
+			'Interfaces React pixel-perfect a partir de diseños Figma',
+			'Code review de Pull Requests con criterios de arquitectura modular (SOLID, hexagonal)',
+			'Validación de integraciones backend en NestJS entre capas',
+			'Primer experiencia con flujo CI/CD completo: Husky + ESLint + Prettier + Jest',
+			'Trabajo bajo metodología ágil en equipo multidisciplinario',
 		],
 		technologies: [
 			'React',
@@ -137,8 +135,5 @@ export const experience = [
 ];
 
 export const experienceStats = [
-	{ number: '2+', label: 'Años de experiencia', icon: '🚀' },
-	{ number: '20+', label: 'Proyectos completados', icon: '💼' },
-	{ number: '7+', label: 'Clientes felices', icon: '😊' },
-	{ number: '3', label: 'Miembros del equipo liderados', icon: '👥' },
+	{ number: '3+', label: 'Años de experiencia', iconName: 'TrendingUp' },
 ];

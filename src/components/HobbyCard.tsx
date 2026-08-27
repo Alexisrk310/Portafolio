@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
+import { AnimatedIcon } from './AnimatedIcon';
 
 interface Hobby {
 	title: string;
 	description: string;
-	icon: string;
+	iconName: string;
 	color: string;
 }
 
@@ -20,13 +21,21 @@ const HobbyCard = ({ hobby, index }: Props) => {
 			transition={{ duration: 0.5, delay: index * 0.1 }}
 			viewport={{ once: true }}
 			whileHover={{ scale: 1.05, rotate: 2 }}
-			className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center">
+			className="rounded-2xl p-6 transition-all duration-300 text-center"
+			style={{
+				background: 'var(--bg-card)',
+				border: '1px solid var(--border-subtle)',
+			}}
+		>
 			<div
-				className={`w-16 h-16 bg-gradient-to-r ${hobby.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-				<span className="text-3xl">{hobby.icon}</span>
+				className={`w-16 h-16 bg-gradient-to-r ${hobby.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
+			>
+				<AnimatedIcon iconName={hobby.iconName} size={28} color="white" />
 			</div>
-			<h4 className="text-lg font-bold text-gray-800 mb-2">{hobby.title}</h4>
-			<p className="text-gray-600 text-sm leading-relaxed">
+			<h4 className="text-lg font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
+				{hobby.title}
+			</h4>
+			<p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
 				{hobby.description}
 			</p>
 		</motion.div>

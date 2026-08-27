@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
-import type { FC, ReactNode } from 'react';
+import type { FC } from 'react';
+import { AnimatedIcon } from './AnimatedIcon';
 
 interface ExperienceStatItemProps {
 	stat: {
-		icon: ReactNode;
+		iconName: string;
 		number: string | number;
 		label: string;
 	};
@@ -21,12 +22,32 @@ export const ExperienceStatItem: FC<ExperienceStatItemProps> = ({
 			transition={{ duration: 0.5, delay: index * 0.1 }}
 			viewport={{ once: true }}
 			whileHover={{ scale: 1.05 }}
-			className="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl border border-purple-100">
-			<div className="text-3xl mb-2">{stat.icon}</div>
-			<div className="text-3xl font-bold text-purple-600 mb-1">
+			className="text-center p-6 rounded-2xl"
+			style={{
+				background: 'var(--bg-card)',
+				border: '1px solid var(--border-subtle)',
+			}}
+		>
+			<div className="flex justify-center mb-3">
+				<div
+					className="w-12 h-12 rounded-xl flex items-center justify-center"
+					style={{
+						background: 'color-mix(in srgb, var(--accent) 12%, transparent)',
+						border: '1px solid color-mix(in srgb, var(--accent) 25%, transparent)',
+					}}
+				>
+					<AnimatedIcon iconName={stat.iconName} size={22} color="var(--accent)" />
+				</div>
+			</div>
+			<div
+				className="text-3xl font-bold mb-1"
+				style={{ color: 'var(--accent)' }}
+			>
 				{stat.number}
 			</div>
-			<div className="text-gray-600 text-sm font-medium">{stat.label}</div>
+			<div className="text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
+				{stat.label}
+			</div>
 		</motion.div>
 	);
 };

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Badge } from './Badge';
 
 interface EducationItem {
 	institution: string;
@@ -23,9 +22,17 @@ export const EducationCard = ({ education, index }: Props) => {
 			transition={{ duration: 0.6, delay: index * 0.2 }}
 			viewport={{ once: true }}
 			whileHover={{ y: -5 }}
-			className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+			className="rounded-2xl p-6 transition-all duration-300"
+			style={{
+				background: 'var(--bg-card)',
+				border: '1px solid var(--border-subtle)',
+			}}
+		>
 			<div className="flex items-center space-x-4 mb-4">
-				<div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl flex items-center justify-center">
+				<div
+					className="w-12 h-12 rounded-xl flex items-center justify-center"
+					style={{ background: 'var(--bg-surface)' }}
+				>
 					<img
 						src={education.logo || '/placeholder.svg'}
 						alt={`${education.institution} logo`}
@@ -35,18 +42,29 @@ export const EducationCard = ({ education, index }: Props) => {
 					/>
 				</div>
 				<div className="flex-1">
-					<h4 className="font-bold text-gray-800 text-lg">
+					<h4 className="font-bold text-lg" style={{ color: 'var(--text-primary)' }}>
 						{education.institution}
 					</h4>
-					<Badge className="bg-purple-50 text-purple-700 border-purple-200 text-xs px-2 py-1 mt-1">
+					<span
+						className="text-xs px-2 py-1 rounded-full font-medium mt-1 inline-block"
+						style={{
+							background: 'color-mix(in srgb, var(--accent) 10%, transparent)',
+							border: '1px solid color-mix(in srgb, var(--accent) 25%, transparent)',
+							color: 'var(--accent)',
+						}}
+					>
 						{education.type}
-					</Badge>
+					</span>
 				</div>
 			</div>
 
-			<h5 className="text-purple-600 font-semibold mb-2">{education.degree}</h5>
-			<p className="text-sm text-gray-500 mb-3">{education.period}</p>
-			<p className="text-gray-600 text-sm mb-4 leading-relaxed">
+			<h5 className="font-semibold mb-2" style={{ color: 'var(--accent)' }}>
+				{education.degree}
+			</h5>
+			<p className="text-sm mb-3" style={{ color: 'var(--text-muted)' }}>
+				{education.period}
+			</p>
+			<p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
 				{education.description}
 			</p>
 		</motion.div>

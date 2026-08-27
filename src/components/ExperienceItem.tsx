@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import type { FC } from 'react';
-import { Badge } from './Badge';
 import { Building2, Calendar, MapPin } from 'lucide-react';
 
 interface ExperienceItemProps {
@@ -29,23 +28,43 @@ export const ExperienceItem: FC<ExperienceItemProps> = ({
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.5, delay: index * 0.1 }}
 			viewport={{ once: true }}
-			className="mb-8 w-full group">
-			<div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-zinc-800">
+			whileHover={{ y: -2 }}
+			className="mb-8 w-full"
+		>
+			<div
+				className="rounded-2xl p-6 sm:p-8 transition-all duration-300"
+				style={{
+					background: 'var(--bg-card)',
+					border: '1px solid var(--border-subtle)',
+				}}
+			>
 				<div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
 					<div className="flex items-start gap-4">
-						<div className="w-12 h-12 rounded-xl bg-purple-50 dark:bg-zinc-800 flex items-center justify-center shrink-0 border border-purple-100 dark:border-zinc-700">
-							<Building2 className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+						<div
+							className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
+							style={{
+								background: 'var(--bg-surface)',
+								border: '1px solid var(--border-subtle)',
+							}}
+						>
+							<Building2 className="w-6 h-6" style={{ color: 'var(--accent)' }} />
 						</div>
 						<div>
-							<h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+							<h3
+								className="text-xl font-bold transition-colors"
+								style={{ color: 'var(--text-primary)' }}
+							>
 								{experience.role}
 							</h3>
-							<h4 className="text-lg font-medium text-gray-700 dark:text-gray-300 mt-1">
+							<h4
+								className="text-lg font-medium mt-1"
+								style={{ color: 'var(--text-secondary)' }}
+							>
 								{experience.company}
 							</h4>
 						</div>
 					</div>
-					<div className="flex flex-col items-start md:items-end gap-2 text-sm text-gray-500 dark:text-gray-400">
+					<div className="flex flex-col items-start md:items-end gap-2 text-sm" style={{ color: 'var(--text-muted)' }}>
 						<div className="flex items-center gap-1.5">
 							<Calendar className="w-4 h-4" />
 							<span className="font-medium">{experience.period}</span>
@@ -55,27 +74,47 @@ export const ExperienceItem: FC<ExperienceItemProps> = ({
 								<MapPin className="w-4 h-4" />
 								<span>{experience.location}</span>
 							</div>
-							<Badge className="bg-gray-100 text-gray-700 border-transparent dark:bg-zinc-800 dark:text-gray-300">
+							<span
+								className="text-xs px-2.5 py-1 rounded-full font-medium"
+								style={{
+									background: 'var(--bg-surface)',
+									border: '1px solid var(--border-subtle)',
+									color: 'var(--text-secondary)',
+								}}
+							>
 								{experience.type}
-							</Badge>
+							</span>
 						</div>
 					</div>
 				</div>
 
 				<div className="pl-0 md:pl-16">
-					<p className="text-gray-600 dark:text-gray-400 mb-5 leading-relaxed text-sm md:text-base">
+					<p
+						className="mb-5 leading-relaxed text-sm md:text-base"
+						style={{ color: 'var(--text-secondary)' }}
+					>
 						{experience.description}
 					</p>
 
 					{experience.achievements && experience.achievements.length > 0 && (
 						<div className="mb-6">
-							<h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-3 uppercase tracking-wider">
+							<h4
+								className="text-sm font-semibold mb-3 uppercase tracking-wider"
+								style={{ color: 'var(--text-primary)' }}
+							>
 								Logros Destacados
 							</h4>
 							<ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
 								{experience.achievements.map((achievement, achIndex) => (
-									<li key={achIndex} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-										<span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 shrink-0" />
+									<li
+										key={achIndex}
+										className="flex items-start gap-2 text-sm"
+										style={{ color: 'var(--text-secondary)' }}
+									>
+										<span
+											className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0"
+											style={{ background: 'var(--accent)' }}
+										/>
 										<span className="leading-relaxed">{achievement}</span>
 									</li>
 								))}
@@ -85,11 +124,17 @@ export const ExperienceItem: FC<ExperienceItemProps> = ({
 
 					<div className="flex flex-wrap gap-2">
 						{experience.technologies.map((tech, techIndex) => (
-							<Badge
+							<span
 								key={techIndex}
-								className="bg-purple-50 text-purple-700 border-purple-100 hover:bg-purple-100 dark:bg-purple-900/20 dark:text-purple-300 dark:border-purple-800/30 transition-colors text-xs px-2.5 py-1">
+								className="text-xs px-2.5 py-1 rounded-full font-medium"
+								style={{
+									background: 'color-mix(in srgb, var(--accent) 10%, transparent)',
+									border: '1px solid color-mix(in srgb, var(--accent) 25%, transparent)',
+									color: 'var(--accent)',
+								}}
+							>
 								{tech}
-							</Badge>
+							</span>
 						))}
 					</div>
 				</div>

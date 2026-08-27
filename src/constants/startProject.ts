@@ -2,12 +2,16 @@ export const startProject = [
 	{
 		title: 'Tiempo de respuesta',
 		value: '< 24 horas',
-		icon: '⚡',
+		iconName: 'Zap',
 	},
 	{
 		title: 'Inicio del proyecto',
 		value: 'En menos de 1 semana',
-		icon: '🚀',
+		iconName: 'Rocket',
 	},
-	{ title: 'Zona horaria', value: 'COT (UTC-5)', icon: '🌍' },
+	{
+		title: 'Zona horaria',
+		value: 'COT (UTC-5)',
+		iconName: 'Globe',
+	},
 ];

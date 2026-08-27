@@ -1,115 +1,123 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code, Globe, Palette, Smartphone } from 'lucide-react';
-import { floatingAnimation } from './Animations';
-import { Badge } from './Badge';
+import {
+  SiReact,
+  SiNodedotjs,
+  SiTypescript,
+  SiDocker,
+} from 'react-icons/si';
+import { NeonBadge } from './NeonBadge';
+
+const floatingBadges = [
+  {
+    icon: <SiReact className="h-3.5 w-3.5 text-cyan-400" />,
+    label: 'React',
+    color: 'cyan' as const,
+    pos: 'top-4 -left-14 sm:-left-16',
+    delay: 0,
+    duration: 3,
+  },
+  {
+    icon: <SiNodedotjs className="h-3.5 w-3.5 text-green-400" />,
+    label: 'Node.js',
+    color: 'cyan' as const,
+    pos: 'top-10 -right-14 sm:-right-16',
+    delay: 0.5,
+    duration: 3.5,
+  },
+  {
+    icon: <SiTypescript className="h-3.5 w-3.5 text-blue-400" />,
+    label: 'TypeScript',
+    color: 'neutral' as const,
+    pos: 'bottom-20 -left-14 sm:-left-16',
+    delay: 1,
+    duration: 4,
+  },
+  {
+    icon: <SiDocker className="h-3.5 w-3.5 text-sky-400" />,
+    label: 'Docker',
+    color: 'cyan' as const,
+    pos: 'bottom-8 -right-14 sm:-right-16',
+    delay: 1.5,
+    duration: 3.2,
+  },
+];
 
 export function HeroImage() {
-	return (
-		<motion.div
-			initial={{ opacity: 0, scale: 0.8 }}
-			animate={{ opacity: 1, scale: 1 }}
-			transition={{ duration: 0.8, delay: 0.3 }}
-			className="relative max-w-full mx-auto">
-			{/* Profile Image + Badges */}
-			<div className="relative z-10 flex justify-center">
-				<div className="relative w-[300px] sm:w-[320px] md:w-[340px]">
-					{/* Imagen de perfil */}
-					<div className="w-full aspect-square rounded-full bg-gradient-to-br from-purple-400 via-indigo-500 to-purple-600 p-1">
-						<div className="w-full h-full rounded-full bg-white p-2">
-							<img
-								src="/perfil.jpg"
-								alt="Alexis Gutierrez-Full Stack Developer"
-								className="w-full h-full rounded-full object-cover"
-							/>
-						</div>
-					</div>
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.85 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' }}
+      className="relative flex justify-center items-center py-12 sm:py-0"
+    >
+      <div className="relative w-[240px] sm:w-[280px] md:w-[320px]">
 
-					{/* Floating Badges */}
-					<motion.div
-						animate={{
-							y: [0, -10, 0],
-							rotate: [0, 5, 0],
-							transition: { duration: 3, repeat: Infinity, ease: 'easeInOut' },
-						}}
-						className="absolute top-4 left-1/2 -translate-x-[120%]">
-						<Badge className="bg-white shadow-lg border border-purple-100 text-purple-700 px-4 py-2 text-sm font-medium">
-							<Code className="mr-2 h-4 w-4" />
-							React
-						</Badge>
-					</motion.div>
+        {/* Halo de fondo */}
+        <div className="absolute inset-0 rounded-full blur-3xl scale-125 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(6,182,212,0.12) 0%, rgba(14,165,233,0.06) 60%, transparent 100%)' }} />
 
-					<motion.div
-						animate={{
-							y: [0, 12, 0],
-							rotate: [0, -3, 0],
-							transition: {
-								duration: 3.5,
-								repeat: Infinity,
-								ease: 'easeInOut',
-								delay: 0.5,
-							},
-						}}
-						className="absolute top-12 left-1/2 translate-x-[100%]">
-						<Badge className="bg-purple-600 text-white px-4 py-2 text-sm font-medium shadow-lg">
-							<Globe className="mr-2 h-4 w-4" />
-							Full Stack
-						</Badge>
-					</motion.div>
+        {/* Anillo estático con gradiente cyan/sky */}
+        <div
+          className="relative rounded-full p-[3px]"
+          style={{
+            background: 'linear-gradient(135deg, #0ea5e9, #06b6d4, #38bdf8, #0ea5e9)',
+          }}
+        >
+          <div className="rounded-full p-[3px]" style={{ background: 'var(--bg-base)' }}>
+            <img
+              src="/perfil.jpg"
+              alt="Alexis Gutierrez — Full Stack Developer"
+              className="w-full aspect-square rounded-full object-cover"
+              loading="eager"
+              decoding="async"
+              onError={(e) => {
+                const el = e.target as HTMLImageElement;
+                el.src =
+                  'data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%22300%22 height%3D%22300%22 viewBox%3D%220 0 300 300%22%3E%3Crect width%3D%22300%22 height%3D%22300%22 fill%3D%22%231e2536%22%2F%3E%3Ctext x%3D%2250%25%22 y%3D%2255%25%22 dominant-baseline%3D%22middle%22 text-anchor%3D%22middle%22 font-size%3D%22110%22 font-weight%3D%22bold%22 fill%3D%22%2306b6d4%22%3EAG%3C%2Ftext%3E%3C%2Fsvg%3E';
+              }}
+            />
+          </div>
+        </div>
 
-					<motion.div
-						animate={{
-							y: [0, -8, 0],
-							rotate: [0, 2, 0],
-							transition: {
-								duration: 4,
-								repeat: Infinity,
-								ease: 'easeInOut',
-								delay: 1,
-							},
-						}}
-						className="absolute bottom-16 left-1/2 -translate-x-[110%]">
-						<Badge className="bg-indigo-100 text-indigo-700 border border-indigo-200 px-4 py-2 text-sm font-medium shadow-lg">
-							<Palette className="mr-2 h-4 w-4" />
-							UI/UX
-						</Badge>
-					</motion.div>
+        {/* Floating Tech Badges */}
+        {floatingBadges.map((badge) => (
+          <motion.div
+            key={badge.label}
+            className={`absolute ${badge.pos} z-10`}
+            animate={{ y: [0, -8, 0] }}
+            transition={{
+              duration: badge.duration,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: badge.delay,
+            }}
+          >
+            <NeonBadge
+              label={badge.label}
+              color={badge.color}
+              icon={badge.icon}
+              className="shadow-lg backdrop-blur-sm"
+            />
+          </motion.div>
+        ))}
 
-					<motion.div
-						animate={{
-							y: [0, 15, 0],
-							rotate: [0, -5, 0],
-							transition: {
-								duration: 3.2,
-								repeat: Infinity,
-								ease: 'easeInOut',
-								delay: 1.5,
-							},
-						}}
-						className="absolute bottom-6 left-1/2 translate-x-[90%]">
-						<Badge className="bg-white shadow-lg border border-purple-100 text-purple-700 px-4 py-2 text-sm font-medium">
-							<Smartphone className="mr-2 h-4 w-4" />
-							Móvil
-						</Badge>
-					</motion.div>
+        {/* Badge de años — estático, sin rotación */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="absolute -bottom-4 left-1/2 -translate-x-1/2 z-10"
+        >
+          <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-full gradient-animated flex items-center justify-center shadow-[0_0_16px_rgba(124,58,237,0.4)]">
+            <div className="text-center">
+              <div className="text-white font-black text-lg leading-none">3+</div>
+              <div className="text-white/75 text-[8px] font-mono uppercase tracking-wider">años</div>
+            </div>
+          </div>
+        </motion.div>
 
-					{/* Años de experiencia */}
-					<motion.div
-						animate={{
-							rotate: [0, 360],
-							transition: { duration: 20, repeat: Infinity, ease: 'linear' },
-						}}
-						className="absolute top-1/2 left-1/2 translate-x-[130%] -translate-y-1/2">
-						<div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-							<div className="text-center">
-								<div className="text-white font-bold text-lg">2+</div>
-								<div className="text-purple-100 text-xs font-medium">AÑOS</div>
-							</div>
-						</div>
-					</motion.div>
-				</div>
-			</div>
-		</motion.div>
-	);
+      </div>
+    </motion.div>
+  );
 }
