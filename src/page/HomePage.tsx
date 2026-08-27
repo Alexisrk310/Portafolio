@@ -88,7 +88,7 @@ export default function HomePage() {
               <span className="text-gradient">Producción</span>
             </h2>
             <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-              No son demos. Son sitios con dominio propio, pasarelas de pago reales y clientes que los usan hoy.
+              Proyectos en producción y profesionales, no simples demos.
             </p>
           </motion.div>
 
