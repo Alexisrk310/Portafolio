@@ -157,4 +157,15 @@ export const projects = [
 		link: 'https://landing-page-template-opal.vercel.app/',
 		github: 'https://github.com/Alexisrk310/landing-page-template',
 	},
+	{
+		title: 'Cartagena Tours',
+		description:
+			'Sitio bilingüe (ES/EN) para una agencia de tours en Cartagena de Indias. Catálogo de experiencias con filtros por categoría, SEO técnico con JSON-LD y hreflang, animaciones con GSAP y ScrollTrigger (galería bento, fan de fotos con scroll), reserva por WhatsApp con pasarela de pago lista detrás de un feature flag, y suite de tests unitarios (Vitest) y end-to-end (Playwright).',
+		image: '/projects/cartagena-tours.png?height=250&width=400',
+		tags: ['Next.js', 'TypeScript', 'next-intl', 'GSAP', 'TailwindCSS', 'Vitest', 'Playwright'],
+		category: 'Full Stack',
+		link: 'https://tours-deploy.vercel.app',
+		github: 'https://github.com/Alexisrk310/cartagena-tours',
+		featured: true,
+	},
 ];
