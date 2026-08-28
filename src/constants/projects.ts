@@ -165,7 +165,7 @@ export const projects = [
 		tags: ['Next.js', 'TypeScript', 'next-intl', 'GSAP', 'TailwindCSS', 'Vitest', 'Playwright'],
 		category: 'Full Stack',
 		link: 'https://tours-deploy.vercel.app',
-		github: 'https://github.com/Alexisrk310/cartagena-tours',
+		github: '#',
 		featured: true,
 	},
 ];
